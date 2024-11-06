@@ -1,16 +1,17 @@
 {
 	"admin_server": {
-		"listen_url": "127.0.0.1:3333",
-		"use_tls": true,
-		"cert_path": "gophish_admin.crt",
-		"key_path": "gophish_admin.key",
-		"trusted_origins": []
-	},
-	"phish_server": {
 		"listen_url": "0.0.0.0:$PORT",
 		"use_tls": false,
+		"cert_path": "gophish_admin.crt",
+		"key_path": "gophish_admin.key",
+		"trusted_origins": ["0.0.0.0", "https://gophish-sofia-f1a741d40994.herokuapp.com", "http://localhost", "http://127.0.0.1"]
+	},
+	"phish_server": {
+		"listen_url": "0.0.0.0:3333",
+		"use_tls": false,
 		"cert_path": "example.crt",
-		"key_path": "example.key"
+		"key_path": "example.key",
+		"trusted_origins": ["0.0.0.0", "https://gophish-sofia-f1a741d40994.herokuapp.com", "http://localhost", "http://127.0.0.1"]
 	},
 	"db_name": "sqlite3",
 	"db_path": "gophish.db",
