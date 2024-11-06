@@ -1,1 +1,1 @@
-web: ./gophish
+web: ./bin/gophish
