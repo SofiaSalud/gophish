@@ -58,8 +58,10 @@ var (
 )
 
 func main() {
-	// Load the version
-
+	port := os.Getenv("PORT")
+	if port == "" {
+			port = "8080" // Default to port 8080 if PORT isn't set
+	}
 	version, err := ioutil.ReadFile("./VERSION")
 	if err != nil {
 		log.Fatal(err)
